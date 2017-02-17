@@ -6,6 +6,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>Vuetiful Blog</title>
+
+        <link href="/css/app.css" rel="stylesheet" type="text/css" />
+
+
     </head>
     <body>
        <div id="app">
