@@ -11,6 +11,15 @@
 |
 */
 
+
+
+Route::get('/admin/{vue?}', function(){
+    return view('admin');
+});
+
+Route::post('/login', 'Auth\LoginController@login');
+Route::post('/logout', 'Auth\LoginController@logout');
+
 Route::get('/{vue?}', function(){
   return view('app');
 })->where('vue', '^(?!.*api).*$[\/\w\.-]*');

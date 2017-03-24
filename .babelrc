@@ -1,3 +1,10 @@
 {
-  "presets": ["es2015"]
+  "presets": ["es2015"],
+    "plugins": [
+    ["babel-plugin-root-import",
+    {
+      "rootPathSuffix": "resources/assets/js",
+      "rootPathPrefix": "@"
+    }]
+  ]
 }

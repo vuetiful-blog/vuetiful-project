@@ -4,9 +4,8 @@
             <div class="left floated">Posted in
                 <span v-for="(category, index) in categories">
                 <router-link :to="category.link">{{category.name}}</router-link><span v-if="!isLast(index)">, </span>
+                </span>
             </div>
-            </span>
-
         </div>
         <div class="content">
             <div class="header">

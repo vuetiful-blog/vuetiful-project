@@ -5,6 +5,8 @@
             <span slot="published">2 Days Ago</span>
             <p slot="description">If you’re using Vue as an HTML templating engine, i.e. you’re placing vue template items directly in your HTML, then you may have noticed that the raw template items display for a short time before the Vue instance loads, which can look pretty ugly.</p>
         </card>
+
+              
         <card :categories="[{link: '/', name: 'Vuetiful Project'}]">
             <span slot="title">Vuetiful Project: Setting up an SPA with Vue.js and Laravel 5.4</span>
             <span slot="published">3 Days Ago</span>

@@ -5,12 +5,15 @@
     "hmr": "gulp hmr",
     "semantic": "cd resources/assets/semantic && gulp build",
     "sass": "gulp sass",
-    "ui" : "npm-run-all --sequential semantic sass",
-    "dev": "npm-run-all --parallel hmr serve"
+    "ui": "npm-run-all --sequential semantic sass",
+    "dev": "npm-run-all --parallel hmr serve",
+    "hmr-admin": "gulp hmr -f=resources/assets/js/admin/admin.js -d=public/js/admin",
+    "dev-admin": "npm-run-all --parallel hmr-admin serve"
   },
   "devDependencies": {
     "axios": "^0.15.3",
     "babel-core": "^6.22.1",
+    "babel-plugin-root-import": "^5.1.0",
     "babel-preset-es2015": "^6.22.0",
     "babel-register": "^6.22.0",
     "babelify": "^7.3.0",
@@ -50,12 +53,14 @@
     "require-dot-file": "^0.4.0",
     "run-sequence": "^1.2.2",
     "semantic-ui": "^2.2.7",
+    "velocity-animate": "^1.4.3",
     "vinyl-source-stream": "^1.1.0",
     "vue": "^2.1.10",
     "vue-router": "^2.2.1",
     "vueify": "^9.4.0",
     "watchify": "^3.9.0",
-    "yamljs": "^0.2.8"
+    "yamljs": "^0.2.8",
+    "yargs": "^7.0.2"
   },
   "browserify": {
     "transform": [

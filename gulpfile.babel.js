@@ -4,6 +4,12 @@ import source from "vinyl-source-stream";
 import sass from "gulp-sass";
 import hmr from 'browserify-hmr';
 import watchify from 'watchify';
+import util from 'gulp-util';
+import { argv } from 'yargs';
+import flatten from 'gulp-flatten';
+
+var entry = (argv.f !== undefined) ? argv.f : "resources/assets/js/app.js";
+var dest = (argv.d !== undefined) ? argv.d : "public/js";
 
 gulp.task('default', () => {
     return browserify({
@@ -17,7 +23,7 @@ gulp.task('default', () => {
 
 gulp.task('hmr', () => {
     const b = browserify({
-        entries: 'resources/assets/js/app.js',
+        entries: entry,
         plugin: [hmr, watchify],
         debug: true
     })
@@ -30,8 +36,9 @@ gulp.task('hmr', () => {
             .on('error', err => {
                 util.log("Browserify Error", util.colors.red(err.message))
             })
-            .pipe(source('app.js'))
-            .pipe(gulp.dest('public/js'));
+            .pipe(source(entry))
+            .pipe(flatten())
+            .pipe(gulp.dest(dest));
     }
 });
 
