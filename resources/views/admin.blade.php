@@ -18,9 +18,7 @@
 
     </head>
     <body>
-       <div id="app">
-
-       </div>
-       <script src="/js/admin/admin.js"></script>
+         <div id="app"></div>
+         <script src="/js/admin/admin.js"></script>
     </body>
 </html>
