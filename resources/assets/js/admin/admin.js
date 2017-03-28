@@ -12,16 +12,29 @@ axios.defaults.headers.common = {
 };
 
 import Login from './components/views/Login.vue'
-
+import Dashboard from './components/views/Dashboard.vue'
 
 const routes = [
+    { path: '/', component: Dashboard },
     { path: '/login', component: Login },
 ]
 
 const router = new VueRouter({
-	base: '/admin',
+    base: '/admin',
     mode: 'history',
     routes
+})
+
+router.beforeEach((to, from, next) => {
+    if (to.fullPath !== "/login") {
+        axios.get('/api/profile').then(response => {
+            next();
+        }).catch(error => {
+            router.push('/login');
+        })
+    } else {
+        next();
+    }
 })
 
 const app = new Vue({

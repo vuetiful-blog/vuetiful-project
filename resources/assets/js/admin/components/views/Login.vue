@@ -59,7 +59,6 @@ export default {
                         this.error.header = error.response.data.header
                         this.error.message = error.response.data.message
                     }
-                }).then(() => {
                     this.loading = false;
                 });
         }
