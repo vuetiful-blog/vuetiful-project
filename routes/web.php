@@ -15,7 +15,7 @@
 
 Route::get('/admin/{vue?}', function(){
     return view('admin');
-});
+})->where('vue', '^(?!.*api).*$[\/\w\.-]*');
 
 Route::post('/login', 'Auth\LoginController@login');
 Route::post('/logout', 'Auth\LoginController@logout');

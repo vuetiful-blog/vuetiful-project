@@ -13,10 +13,12 @@ axios.defaults.headers.common = {
 
 import Login from './components/views/Login.vue'
 import Dashboard from './components/views/Dashboard.vue'
+import CreatePost from './components/views/CreatePost.vue'
 
 const routes = [
     { path: '/', component: Dashboard },
     { path: '/login', component: Login },
+    { path: '/posts/create', component: CreatePost },
 ]
 
 const router = new VueRouter({

@@ -18,3 +18,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::middleware('auth:api')->get('/profile', 'Api\ProfileController@getUser');
+Route::middleware('auth:api')->resource('/articles', 'Api\ArticlesController');
+Route::middleware('auth:api')->post('/articles/preview', 'Api\ArticlesController@preview');
