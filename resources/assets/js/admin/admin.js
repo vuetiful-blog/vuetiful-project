@@ -3,9 +3,13 @@ import Admin from './components/Admin.vue';
 import Axios from 'axios';
 import VueRouter from 'vue-router';
 import Velocity from 'velocity-animate';
+import SweetAlert from 'sweetalert2';
+
 Vue.use(VueRouter)
 
 window.axios = Axios;
+window.swal = SweetAlert;
+
 axios.defaults.headers.common = {
     'X-CSRF-TOKEN': window.Laravel.csrfToken,
     'X-Requested-With': 'XMLHttpRequest'

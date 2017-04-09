@@ -6,23 +6,23 @@
 
 <script type="text/javascript">
 export default {
-	props: {
-		loadingText:{
-			default: '',
-			type: String
-		},
-		loading:{
-			default: false,
-			type: Boolean
-		},
-		inverted:{
-			default: true,
-			type: Boolean
-		},
-		dimmer:{
-			default: true,
-			type: Boolean
-		}
-	}
+    props: {
+        loadingText: {
+            default: '',
+            type: String
+        },
+        loading: {
+            default: false,
+            type: Boolean
+        },
+        inverted: {
+            default: true,
+            type: Boolean
+        },
+        dimmer: {
+            default: true,
+            type: Boolean
+        }
+    }
 }
 </script>

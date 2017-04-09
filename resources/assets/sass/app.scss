@@ -1,12 +1,15 @@
 /* 
-// Fonts
-@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
-
 // Variables
 @import "variables";
 
 // Bootstrap
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap"; */
 
+// Fonts
 @import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+
+// Sweet Alert
+@import "node_modules/sweetalert2/dist/sweetalert2.min";
+
+// Semantic-Ui
 @import "../semantic/dist/semantic";

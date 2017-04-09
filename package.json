@@ -53,6 +53,7 @@
     "require-dot-file": "^0.4.0",
     "run-sequence": "^1.2.2",
     "semantic-ui": "^2.2.7",
+    "sweetalert2": "^6.6.0",
     "velocity-animate": "^1.4.3",
     "vinyl-source-stream": "^1.1.0",
     "vue": "^2.1.10",
